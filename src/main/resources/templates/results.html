@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<!--<head th:replace="fragments :: head">-->
+<!--</head>-->
+<body>
+
+<!--<div th:replace="fragments :: page-header"></div>-->
+
+<!--<div class="container body-content">-->
+
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+
+    <!-- TODO #1 - Use a loop to display job results in a table. -->
+
+    <table th:each="restaurant : ${restaurant}">
+<!--        <tr>-->
+<!--            <td th:text="'ID: ' + ${item.getId()}"></td>-->
+<!--        </tr>-->
+        <tr>
+            <td th:text="${restaurant.getName()}"></td>
+        </tr>
+        <tr>
+            <td th:text="'Address: ' + ${restaurant.getAddress()}"></td>
+        </tr>
+        <tr>
+            <td th:text="'Rating: ' + ${restaurant.getRating()}"></td>
+        </tr>
+        <br>
+<!--        <tr>-->
+<!--            <td th:text="'Position Type: ' + ${item.getPositionType()}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td th:text="'Skill: ' + ${item.getCoreCompetency()}"></td>-->
+<!--        </tr>-->
+    </table>
+
+<!--</div>-->
+
+</body>
+</html>
